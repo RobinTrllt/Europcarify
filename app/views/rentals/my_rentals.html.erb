@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>My car rentals</h2>
+
+  <% @my_rentals.each do |rental| %>
+    <h2><%= rental.vehicle.brand%> <%= rental.vehicle.model%></h2>
+    <h2><%= rental.start_date %></h2>
+    <h2><%= rental.end_date %></h2>
+    <h2>price: <%= rental.vehicle.price%><span>,00€</span></h2>
+<%end%>
+
+</div>

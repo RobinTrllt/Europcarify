@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="vhl-infos-rental">
+    <h3><strong><%= "#{@vehicle.brand} #{@vehicle.model}" %></strong></h3>
+    <div>Genre : <%= "#{@vehicle.genre}" %></div>
+    <div>Capacité: <%= "#{@vehicle.capacity}" %> passagers</div>
+    <div>Nombre de portes: <%= "#{@vehicle.doors}" %></div>
+    <div>Carburant: <%= "#{@vehicle.fuel}" %></div>
+    <div>Air conditionné: <%= @vehicle.ac == true ? "Oui" : "Non" %></div>
+  </div>
+
+  <div class="vhl-price-rental">
+    <strong><%= "#{@vehicle.price},99 €/jour" %></strong>
+  </div>
+
+  <div id="booking-form-div"
+        data-reservations="<%= @dates_off.to_json %>">
+  </div>
+
+  <div class="form">
+    <%= simple_form_for [ @vehicle.agency, @vehicle, @rental ] do |f| %>
+      <%= f.input :start_date, label: false,
+                        as: :string,
+                        input_html: {id: "range_start", class: "d-none"} %>
+      <%= f.input :end_date, label: false,
+                  as: :string,
+                  input_html: {id: "range_end", class: "d-none"} %>
+      <%= f.button :submit, 'Confirmer la réservation', class: "btn-home", data: { confirm: "Are you sure ?"} %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

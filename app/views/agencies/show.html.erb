@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="agency-infos">
+    <h2><%= @agency.name %></h1>
+    <div><i class="fas fa-map-marker-alt"></i> <%= @agency.address %></div>
+    <div><i class="far fa-envelope"></i> <%= @agency.email %></div>
+    <div><i class="fas fa-phone-square-alt"></i> <%= @agency.phone_number %></div>
+  </div>
+
+  <div class="agency-vehicles">
+    <h3>Véhicules disponibles à la location</h3>
+    <div class="vehicle-cards">
+      <% @agency.vehicles.each do |vehicle|%>
+
+        <div class="vhl-card">
+          <div class="vhl-card-top">
+            <strong><%= "#{vehicle.brand} #{vehicle.model}" %></strong>
+          </div>
+          <div class="vhl-card-bottom">
+            <%= image_tag "#{vehicle.photo}", class:"vhl-photo" %>
+            <div class="vhl-infos">
+              <div>Genre : <%= "#{vehicle.genre}" %></div>
+              <div>Capacité: <%= "#{vehicle.capacity}" %> passagers</div>
+              <div>Nombre de portes: <%= "#{vehicle.doors}" %></div>
+              <div>Carburant: <%= "#{vehicle.fuel}" %></div>
+              <div>Air conditionné: <%= vehicle.ac == true ? "Oui" : "Non" %></div>
+            </div>
+            <div class="vhl-price">
+              <strong><%= "#{vehicle.price},99 €/jour" %></strong>
+              <%= link_to new_agency_vehicle_rental_path(@agency, vehicle), class:'btn-home' do %>
+              Réserver cette voiture
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+
+      <% end %>
+    </div>
+  </div>
+
+</div>

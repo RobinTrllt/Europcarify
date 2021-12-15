@@ -1,0 +1,51 @@
+.agency-infos{
+  border-left: 2px solid green;
+  padding: 10px 30px;
+  margin-bottom: 50px;
+}
+
+.vhl-card{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 15px auto;
+  padding: 20px;
+  height: 270px;
+}
+
+.vhl-card:hover{
+  border: 1px solid green;
+}
+
+
+.vhl-card-top{
+  display: flex;
+  align-items: center;
+  height: 20%;
+  font-size: 26px;
+  padding-left: 20px;
+}
+
+.vhl-card-bottom{
+  height: 80%;
+  display: flex;
+}
+
+.vhl-photo{
+  height: 100%;
+  width: 20%;
+}
+
+.vhl-infos{
+  width: 60%;
+  padding-left: 50px;
+}
+
+.vhl-price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  width: 20%;
+}

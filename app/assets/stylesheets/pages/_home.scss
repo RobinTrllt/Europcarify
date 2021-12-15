@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+
+.agencies-home{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-home {background-image: linear-gradient(to right, #1D976C 0%, #26d165  51%, #1D976C  100%)}
+.btn-home {
+  margin: 10px;
+  padding: 15px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.btn-home:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,14 @@
+<div class="header-home">
+  <h1><strong> Louez votre véhicule en quelques clics </strong></h1>
+</div>
+
+<div class="container">
+<h2 style="text-align:center">Dans quelle agence souhaitez-vous réserver un véhicule ?</h2>
+
+<div class="agencies-home">
+  <% @agencies.each do |agency| %>
+      <%= link_to agency_path(agency), class:'btn-home' do %>
+        <%= "#{agency.name}" %>
+      <% end %>
+  <% end %>
+</div>
